@@ -93,6 +93,17 @@
   color: #102a43;
 }
 
+.secondary-btn {
+  display: inline-block;
+  margin-top: 0.6rem;
+  background: #e3edf8;
+  color: #12365a;
+  text-decoration: none;
+  padding: 0.72rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
 .section {
   max-width: 1100px;
   margin: 0 auto;
@@ -103,6 +114,10 @@
   margin-top: 0;
   color: #0f2a43;
   font-size: 1.6rem;
+}
+
+.section > p {
+  max-width: 760px;
 }
 
 .about p {
@@ -163,15 +178,53 @@
 
 .contact-box {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem 1.1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .contact-box a {
   text-decoration: none;
   color: #0f2a43;
   font-weight: 600;
+}
+
+.contact-box h4 {
+  margin: 0;
+  color: #12365a;
+}
+
+.contact-box p {
+  margin: 0;
+}
+
+.contact-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.contact-list li {
+  margin-bottom: 0.4rem;
+}
+
+.callout {
+  background: #eaf1f9;
+  border-radius: 14px;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.6rem;
 }
 
 .footer {

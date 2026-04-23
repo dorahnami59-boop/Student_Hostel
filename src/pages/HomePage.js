@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { features } from '../data/siteData';
+import { amenities, bookingSteps, features } from '../data/siteData';
 
 function HomePage() {
   return (
@@ -31,6 +31,34 @@ function HomePage() {
               <p>{feature.description}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <h3>Popular Amenities</h3>
+        <div className="feature-grid">
+          {amenities.map((item) => (
+            <article key={item}>
+              <p>{item}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section callout">
+        <h3>Simple Booking Process</h3>
+        <ol className="contact-list">
+          {bookingSteps.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+        <div className="cta-row">
+          <Link to="/contact" className="primary-btn">
+            Contact for Availability
+          </Link>
+          <Link to="/rooms" className="secondary-btn">
+            Compare Room Types
+          </Link>
         </div>
       </section>
     </>
