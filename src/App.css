@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+.site {
+  color: #1d2735;
+  background: #f4f7fb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero {
+  background: linear-gradient(130deg, #0f2a43, #19466f);
+  color: #f6f8fb;
+  padding: 1.25rem 1.5rem 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
+  max-width: 1100px;
+  margin: 0 auto 3.5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.nav h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.nav-cta,
+.primary-btn {
+  text-decoration: none;
+  padding: 0.72rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.nav-cta {
+  color: #102a43;
+  background: #f4c26b;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.42rem 0.8rem;
+  border: 1px solid #7ea7cc;
+  border-radius: 999px;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.hero h2 {
+  margin: 1rem 0 0.85rem;
+  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  max-width: 700px;
+}
+
+.hero p {
+  max-width: 680px;
+}
+
+.primary-btn {
+  display: inline-block;
+  margin-top: 0.6rem;
+  background: #f4c26b;
+  color: #102a43;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section h3 {
+  margin-top: 0;
+  color: #0f2a43;
+  font-size: 1.6rem;
+}
+
+.about p {
+  max-width: 760px;
+}
+
+.feature-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.feature-grid article,
+.room-card,
+.contact-box {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(16, 42, 67, 0.08);
+}
+
+.feature-grid article {
+  padding: 1rem 1rem 0.8rem;
+}
+
+.feature-grid h4,
+.room-body h4 {
+  margin: 0 0 0.4rem;
+  color: #12365a;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.room-card {
+  overflow: hidden;
+}
+
+.room-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #d7e3f0;
+}
+
+.room-body {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.price {
+  color: #1f4c78;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+}
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.contact-box a {
+  text-decoration: none;
+  color: #0f2a43;
+  font-weight: 600;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.2rem;
+  color: #4a5d73;
+  background: #eaf0f7;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
