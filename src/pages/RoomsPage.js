@@ -10,6 +10,9 @@ function RoomsPage() {
           Choose the room type that best matches your comfort level, privacy preference,
           and monthly budget.
         </p>
+        <p className="muted-text">
+          Room photos are shown according to image names placed in `public/images`.
+        </p>
         <div className="room-grid">
           {roomCards.map((room) => (
             <article className="room-card" key={room.name}>

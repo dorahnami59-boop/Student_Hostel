@@ -1,3 +1,5 @@
+import { pageImages } from '../data/siteData';
+
 function ContactPage() {
   return (
     <section className="section">
@@ -6,6 +8,14 @@ function ContactPage() {
         Reach us directly for room availability, booking support, or any information about
         moving into Delight Students Hostel.
       </p>
+      <img
+        className="section-image"
+        src={pageImages.contact}
+        alt="Hostel contact and reception area"
+        onError={(event) => {
+          event.currentTarget.style.display = 'none';
+        }}
+      />
 
       <div className="contact-grid">
         <div className="contact-box">

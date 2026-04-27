@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { amenities, bookingSteps, features } from '../data/siteData';
+import { amenities, bookingSteps, features, pageImages } from '../data/siteData';
 
 function HomePage() {
   return (
@@ -16,6 +16,14 @@ function HomePage() {
             View Room Options
           </Link>
         </div>
+        <img
+          className="hero-visual"
+          src={pageImages.home}
+          alt="Delight Students Hostel main view"
+          onError={(event) => {
+            event.currentTarget.style.display = 'none';
+          }}
+        />
       </section>
 
       <section className="section">
@@ -41,6 +49,22 @@ function HomePage() {
             <article key={item}>
               <p>{item}</p>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <h3>Hostel Gallery</h3>
+        <div className="image-grid">
+          {pageImages.gallery.map((image) => (
+            <img
+              key={image}
+              src={image}
+              alt="Hostel environment"
+              onError={(event) => {
+                event.currentTarget.style.display = 'none';
+              }}
+            />
           ))}
         </div>
       </section>

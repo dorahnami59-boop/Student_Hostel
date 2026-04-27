@@ -3,19 +3,19 @@ export const roomCards = [
     name: 'Single Room',
     price: 'UGX 800,000 per semester',
     description: 'Perfect for students who value privacy, focus, and quiet study time.',
-    image: '/images/single-room.jpg',
+    image: `${process.env.PUBLIC_URL}/Images/single room.jpeg`,
   },
   {
     name: 'Double Room',
     price: 'UGX 1,600,000 per semester',
     description: 'A balanced option for comfort and affordability with shared space.',
-    image: '/images/double-room.jpg',
+    image: `${process.env.PUBLIC_URL}/Images/room inside.jpeg`,
   },
   {
     name: 'Triple Room',
     price: 'UGX 2,200,000 per semester',
     description: 'A budget-friendly choice for students who enjoy community living.',
-    image: '/images/triple-room.jpg',
+    image: `${process.env.PUBLIC_URL}/Images/multiple beds room.jpeg`,
   },
 ];
 
@@ -66,3 +66,14 @@ export const hostelValues = [
       'We keep communication simple and responsive to make bookings and inquiries stress-free.',
   },
 ];
+
+export const pageImages = {
+  home: `${process.env.PUBLIC_URL}/Images/hostel.jpeg`,
+  about: `${process.env.PUBLIC_URL}/Images/single room 2.jpeg`,
+  contact: `${process.env.PUBLIC_URL}/Images/room inside.jpeg`,
+  gallery: [
+    `${process.env.PUBLIC_URL}/Images/single room.jpeg`,
+    `${process.env.PUBLIC_URL}/Images/single room 2.jpeg`,
+    `${process.env.PUBLIC_URL}/Images/bath room.jpeg`,
+  ],
+};

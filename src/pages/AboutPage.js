@@ -1,10 +1,18 @@
-import { hostelValues } from '../data/siteData';
+import { hostelValues, pageImages } from '../data/siteData';
 
 function AboutPage() {
   return (
     <>
       <section className="section">
         <h3>About Delight Students Hostel</h3>
+        <img
+          className="section-image"
+          src={pageImages.about}
+          alt="Delight Students Hostel building"
+          onError={(event) => {
+            event.currentTarget.style.display = 'none';
+          }}
+        />
         <p>
           Delight Students Hostel is a modern student accommodation in Kikoni near
           Makerere University, dedicated to providing comfortable, clean, and secure
