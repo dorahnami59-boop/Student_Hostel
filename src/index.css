@@ -3,8 +3,8 @@ html {
 }
 
 ::selection {
-  background: rgba(244, 194, 107, 0.35);
-  color: #0f2a43;
+  background: rgba(212, 168, 83, 0.35);
+  color: #3d1520;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   font-family: 'Segoe UI', Roboto, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f4f7fb;
+  background: #faf2f4;
 }
 
 * {
