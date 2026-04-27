@@ -10,15 +10,13 @@ function RoomsPage() {
           Choose the room type that best matches your comfort level, privacy preference,
           and monthly budget.
         </p>
-        <p className="muted-text">
-          Room photos are shown according to image names placed in `public/images`.
-        </p>
         <div className="room-grid">
           {roomCards.map((room) => (
             <article className="room-card" key={room.name}>
               <img
                 src={room.image}
                 alt={room.name}
+                loading="lazy"
                 onError={(event) => {
                   event.currentTarget.style.display = 'none';
                 }}
@@ -27,6 +25,9 @@ function RoomsPage() {
                 <h4>{room.name}</h4>
                 <p className="price">{room.price}</p>
                 <p>{room.description}</p>
+                <Link to="/contact" className="card-btn">
+                  Inquire Now
+                </Link>
               </div>
             </article>
           ))}

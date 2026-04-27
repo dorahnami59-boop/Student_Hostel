@@ -61,6 +61,7 @@ function HomePage() {
               key={image}
               src={image}
               alt="Hostel environment"
+              loading="lazy"
               onError={(event) => {
                 event.currentTarget.style.display = 'none';
               }}

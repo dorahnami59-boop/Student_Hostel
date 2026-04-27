@@ -12,6 +12,7 @@ function ContactPage() {
         className="section-image"
         src={pageImages.contact}
         alt="Hostel contact and reception area"
+        loading="lazy"
         onError={(event) => {
           event.currentTarget.style.display = 'none';
         }}

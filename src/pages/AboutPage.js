@@ -9,6 +9,7 @@ function AboutPage() {
           className="section-image"
           src={pageImages.about}
           alt="Delight Students Hostel building"
+          loading="lazy"
           onError={(event) => {
             event.currentTarget.style.display = 'none';
           }}
