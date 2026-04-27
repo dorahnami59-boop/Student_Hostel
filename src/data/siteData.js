@@ -1,19 +1,19 @@
 export const roomCards = [
   {
     name: 'Single Room',
-    price: 'UGX 800,000 per semester',
+    price: 'SHS. 1,000,000',
     description: 'Perfect for students who value privacy, focus, and quiet study time.',
     image: `${process.env.PUBLIC_URL}/Images/single room.jpeg`,
   },
   {
     name: 'Double Room',
-    price: 'UGX 1,600,000 per semester',
+    price: 'SHS. 1,600,000 (SHS. 800,000 per person)',
     description: 'A balanced option for comfort and affordability with shared space.',
     image: `${process.env.PUBLIC_URL}/Images/room inside.jpeg`,
   },
   {
     name: 'Triple Room',
-    price: 'UGX 2,200,000 per semester',
+    price: 'SHS. 1,800,000 (SHS. 600,000 per person)',
     description: 'A budget-friendly choice for students who enjoy community living.',
     image: `${process.env.PUBLIC_URL}/Images/multiple beds room.jpeg`,
   },
@@ -64,6 +64,59 @@ export const hostelValues = [
     title: 'Reliable Support',
     description:
       'We keep communication simple and responsive to make bookings and inquiries stress-free.',
+  },
+];
+
+export const teamMembers = [
+  {
+    name: 'ACIO NAUME DORAH',
+    initials: 'AND',
+    isLeader: true,
+  },
+  {
+    name: 'KIRABO HOPE MUSINGUZI',
+    initials: 'KHM',
+    isLeader: false,
+  },
+  {
+    name: 'KUSHABA JUDE',
+    initials: 'KJ',
+    isLeader: false,
+  },
+  {
+    name: 'NANTUMBWE PRIMAH',
+    initials: 'NP',
+    isLeader: false,
+  },
+  {
+    name: 'NAKIYIMBA CATE',
+    initials: 'NC',
+    isLeader: false,
+  },
+  {
+    name: 'KIKUNGWE RASHIDA NAMPEWO',
+    initials: 'KN',
+    isLeader: false,
+  },
+  {
+    name: 'DAMBA SHADRACK',
+    initials: 'DS',
+    isLeader: false,
+  },
+  {
+    name: 'NAKASAGGA JEMIMAH MURUNGI',
+    initials: 'NM',
+    isLeader: false,
+  },
+  {
+    name: 'NAMULINDWA SYLIVIA',
+    initials: 'NS',
+    isLeader: false,
+  },
+  {
+    name: 'LOUMO URSULA',
+    initials: 'LU',
+    isLeader: false,
   },
 ];
 

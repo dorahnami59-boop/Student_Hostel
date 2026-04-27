@@ -1,4 +1,4 @@
-import { hostelValues, pageImages } from '../data/siteData';
+import { hostelValues, pageImages, teamMembers } from '../data/siteData';
 
 function AboutPage() {
   return (
@@ -47,6 +47,27 @@ function AboutPage() {
           We welcome students looking for a quiet and organized hostel experience near
           campus, whether you are a first-year student or returning for a new semester.
         </p>
+      </section>
+
+      <section className="section team-section">
+        <h3>Meet The Team — Group 14</h3>
+        <p>The talented people behind this project.</p>
+
+        <div className="team-leader">
+          <div className="avatar avatar-leader">{teamMembers[0].initials}</div>
+          <h4>{teamMembers[0].name}</h4>
+          <span className="leader-badge leader-badge-featured">Group Leader</span>
+        </div>
+
+        <div className="team-grid">
+          {teamMembers.slice(1).map((member) => (
+            <div className="team-card" key={member.name}>
+              <div className="avatar">{member.initials}</div>
+              <p className="member-name">{member.name}</p>
+              {member.isLeader && <span className="leader-badge">Group Leader</span>}
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
