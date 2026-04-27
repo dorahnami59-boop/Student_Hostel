@@ -28,6 +28,17 @@ function RoomsPage() {
                 <Link to="/contact" className="card-btn">
                   Inquire Now
                 </Link>
+                <a href="tel:0741081048" className="card-btn card-btn-call">
+                  Call Now
+                </a>
+                <a
+                  href="https://wa.me/256741081048?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20room%20at%20Delight%20Students%20Hostel."
+                  className="card-btn card-btn-whatsapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
+                </a>
               </div>
             </article>
           ))}

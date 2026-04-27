@@ -532,6 +532,30 @@
   box-shadow: 0 6px 20px rgba(109, 40, 56, 0.25);
 }
 
+.card-btn-call {
+  margin-top: 0.6rem;
+  background: linear-gradient(135deg, #8f3d4f 0%, #6d2838 100%);
+  color: var(--white);
+  border: none;
+}
+
+.card-btn-call:hover {
+  background: linear-gradient(135deg, #4a1a26 0%, #6d2838 100%);
+  box-shadow: 0 6px 20px rgba(109, 40, 56, 0.35);
+}
+
+.card-btn-whatsapp {
+  margin-top: 0.6rem;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: var(--white);
+  border: none;
+}
+
+.card-btn-whatsapp:hover {
+  background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
+  box-shadow: 0 6px 20px rgba(18, 140, 126, 0.35);
+}
+
 /* ---------- Contact ---------- */
 .contact-grid {
   display: grid;
