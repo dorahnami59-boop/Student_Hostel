@@ -6,8 +6,7 @@ function ContactPage() {
     name: '',
     phone: '',
     email: '',
-    roomType: '',
-    moveInDate: '',
+    subject: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -75,13 +74,13 @@ function ContactPage() {
       </div>
 
       <div className="booking-form-wrap">
-        <h3>Book a Room</h3>
-        <p>Fill in the form below and we will get back to you within 24 hours.</p>
+        <h3>Send Us a Message</h3>
+        <p>Have a question or need more information? Reach out and we will reply promptly.</p>
 
         {submitted ? (
           <div className="form-success">
             <h4>Thank you, {formData.name || 'there'}!</h4>
-            <p>Your booking request has been received. We will contact you shortly to confirm availability.</p>
+            <p>Your message has been sent. We will get back to you as soon as possible.</p>
           </div>
         ) : (
           <form className="booking-form" onSubmit={handleSubmit}>
@@ -122,47 +121,32 @@ function ContactPage() {
                 />
               </label>
               <label>
-                Preferred Room
-                <select
-                  name="roomType"
-                  value={formData.roomType}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="">Select room type</option>
-                  <option value="Single">Single Room</option>
-                  <option value="Double">Double Room</option>
-                  <option value="Triple">Triple Room</option>
-                </select>
-              </label>
-            </div>
-
-            <div className="form-row">
-              <label>
-                Expected Move-in Date
+                Subject
                 <input
-                  type="date"
-                  name="moveInDate"
-                  value={formData.moveInDate}
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
                   onChange={handleChange}
+                  placeholder="What is this about?"
                   required
                 />
               </label>
             </div>
 
             <label>
-              Additional Message
+              Message
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Any special requests or questions..."
-                rows="4"
+                placeholder="Type your message here..."
+                rows="5"
+                required
               />
             </label>
 
             <button type="submit" className="primary-btn">
-              Submit Booking Request
+              Send Message
             </button>
           </form>
         )}
