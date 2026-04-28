@@ -35,6 +35,7 @@ export const features = [
 ];
 
 export const amenities = [
+  'Free WiFi in all rooms and common areas',
   'Self-contained rooms with private washrooms',
   'Fully furnished setup for student convenience',
   'Clean water and reliable utility support',
@@ -118,6 +119,44 @@ export const teamMembers = [
     initials: 'LU',
     isLeader: false,
   },
+];
+
+export const faqItems = [
+  {
+    question: 'Can I pay in instalments?',
+    answer:
+      'Yes. You pay 50% to secure your booking, then the remaining 50% within the first two weeks of moving in.',
+  },
+  {
+    question: 'How much are the rooms?',
+    answer:
+      'Single rooms are SHS. 1,000,000, double rooms are SHS. 1,600,000 (SHS. 800,000 per person), and triple rooms are SHS. 1,800,000 (SHS. 600,000 per person).',
+  },
+  {
+    question: 'What is the curfew time?',
+    answer: 'The main gate closes at 11:00 PM.',
+  },
+  {
+    question: 'Are visitors allowed?',
+    answer: 'Visitors are allowed, but not beyond 9:00 PM.',
+  },
+  {
+    question: 'Are you mixed or single-sex?',
+    answer: 'We are mixed — both male and female students are welcome.',
+  },
+  {
+    question: 'What amenities do you provide?',
+    answer:
+      'Free WiFi, 3x6 beds in every room, 24/7 security plus CCTV cameras, self-contained rooms, clean water, and a quiet study-friendly environment.',
+  },
+];
+
+export const hostelRules = [
+  'No smoking or alcohol on premises',
+  'Visitors must register at reception',
+  'No overnight guest without prior management approval',
+  'Respect for each other resident privacy and property',
+  'Keep rooms and common area clean',
 ];
 
 export const pageImages = {

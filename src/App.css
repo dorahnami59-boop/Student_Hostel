@@ -759,6 +759,309 @@
   text-align: center;
 }
 
+/* ---------- FAQ ---------- */
+.faq-section {
+  text-align: center;
+}
+
+.faq-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.faq-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--rose-200);
+  padding: 1.2rem 1.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.faq-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faq-card summary {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--maroon);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq-card summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gold);
+  transition: var(--transition);
+}
+
+.faq-card[open] summary::after {
+  content: '−';
+  color: var(--maroon-light);
+}
+
+.faq-card p {
+  margin: 0.8rem 0 0;
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+/* ---------- Booking Form ---------- */
+.booking-form-wrap {
+  max-width: 800px;
+  margin: 4rem auto 0;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--rose-100) 0%, #fdf0f3 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--rose-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.booking-form-wrap h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-light) 50%, var(--gold) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+.booking-form-wrap > p {
+  color: var(--text-light);
+  margin: 0 0 1.8rem;
+  font-size: 1.05rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--maroon);
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--rose-200);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--white);
+  transition: var(--transition);
+  outline: none;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(212, 168, 83, 0.15);
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-success {
+  text-align: center;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--rose-200);
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.form-success h4 {
+  margin: 0 0 0.6rem;
+  font-size: 1.4rem;
+  color: var(--maroon);
+}
+
+.form-success p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 1.05rem;
+}
+
+/* ---------- Rules & Regulations ---------- */
+.rules-section {
+  text-align: center;
+}
+
+.rules-list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.rule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem 1.6rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--rose-200);
+  transition: var(--transition);
+}
+
+.rule-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.rule-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--maroon-deep);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.rule-item p {
+  margin: 0;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ---------- Intro Section ---------- */
+.intro-section {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.hostel-name {
+  margin: 0 0 1.2rem;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-light) 50%, var(--gold) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+.hostel-intro {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.intro-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.intro-contact p,
+.intro-contact a {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--maroon);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.intro-contact a:hover {
+  color: var(--gold-dark);
+}
+
+/* ---------- Why Choose Us ---------- */
+.why-us-section {
+  text-align: center;
+}
+
+.why-us-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-us-grid article {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--rose-200);
+  padding: 1.8rem 1.2rem;
+  transition: var(--transition);
+}
+
+.why-us-grid article:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.why-icon {
+  display: block;
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.why-us-grid h4 {
+  margin: 0 0 0.4rem;
+  color: var(--maroon);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.why-us-grid p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* ---------- Tinted Sections ---------- */
 .section-tint {
   background: linear-gradient(135deg, var(--rose-100) 0%, #fdf0f3 100%);
@@ -897,10 +1200,39 @@
     height: 110px;
     font-size: 2.2rem;
   }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rules-list {
+    grid-template-columns: 1fr;
+  }
+
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form-wrap {
+    padding: 1.5rem;
+  }
+
+  .intro-section {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
   .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-us-grid {
     grid-template-columns: 1fr;
   }
   .hero h2 {

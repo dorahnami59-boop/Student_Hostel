@@ -1,6 +1,26 @@
+import { useState } from 'react';
 import { pageImages } from '../data/siteData';
 
 function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    roomType: '',
+    moveInDate: '',
+    message: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <section className="section">
       <h3>Contact and Reservations</h3>
@@ -52,6 +72,100 @@ function ContactPage() {
             <li>Receive final check-in guidance.</li>
           </ol>
         </div>
+      </div>
+
+      <div className="booking-form-wrap">
+        <h3>Book a Room</h3>
+        <p>Fill in the form below and we will get back to you within 24 hours.</p>
+
+        {submitted ? (
+          <div className="form-success">
+            <h4>Thank you, {formData.name || 'there'}!</h4>
+            <p>Your booking request has been received. We will contact you shortly to confirm availability.</p>
+          </div>
+        ) : (
+          <form className="booking-form" onSubmit={handleSubmit}>
+            <div className="form-row">
+              <label>
+                Full Name
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your full name"
+                  required
+                />
+              </label>
+              <label>
+                Phone Number
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="07XX XXX XXX"
+                  required
+                />
+              </label>
+            </div>
+
+            <div className="form-row">
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="you@example.com"
+                />
+              </label>
+              <label>
+                Preferred Room
+                <select
+                  name="roomType"
+                  value={formData.roomType}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select room type</option>
+                  <option value="Single">Single Room</option>
+                  <option value="Double">Double Room</option>
+                  <option value="Triple">Triple Room</option>
+                </select>
+              </label>
+            </div>
+
+            <div className="form-row">
+              <label>
+                Expected Move-in Date
+                <input
+                  type="date"
+                  name="moveInDate"
+                  value={formData.moveInDate}
+                  onChange={handleChange}
+                  required
+                />
+              </label>
+            </div>
+
+            <label>
+              Additional Message
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Any special requests or questions..."
+                rows="4"
+              />
+            </label>
+
+            <button type="submit" className="primary-btn">
+              Submit Booking Request
+            </button>
+          </form>
+        )}
       </div>
     </section>
   );

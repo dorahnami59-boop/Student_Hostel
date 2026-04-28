@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { amenities, bookingSteps, features, pageImages } from '../data/siteData';
+import { amenities, bookingSteps, faqItems, features, pageImages } from '../data/siteData';
 
 function HomePage() {
   return (
@@ -26,19 +26,53 @@ function HomePage() {
         />
       </section>
 
-      <section className="section">
-        <h3>Why Choose Delight</h3>
-        <p>
-          Our mission is to provide students with accessible, high-quality accommodation
-          that combines comfort, safety, and convenience.
+      <section className="section intro-section">
+        <h1 className="hostel-name">DELIGHT STUDENTS HOSTEL</h1>
+        <p className="hostel-intro">
+          Established in 2026, we provide housing for 150+ Makerere University students
+          every semester. It is a safe, affordable student accommodation located in Kikoni —
+          a five-minute walk from Makerere University Western Gate.
         </p>
-        <div className="feature-grid">
-          {features.map((feature) => (
-            <article key={feature.title}>
-              <h4>{feature.title}</h4>
-              <p>{feature.description}</p>
-            </article>
-          ))}
+        <div className="intro-contact">
+          <p>📍 Plot 15, Kikoni Road</p>
+          <a
+            href="https://wa.me/256741081048?text=Hello%2C%20I%20would%20like%20more%20information%20about%20Delight%20Students%20Hostel."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            💬 WhatsApp: 0741081048
+          </a>
+        </div>
+      </section>
+
+      <section className="section why-us-section">
+        <h3>Why Choose Us</h3>
+        <div className="why-us-grid">
+          <article>
+            <span className="why-icon">🚶</span>
+            <h4>Walkable Distance</h4>
+            <p>Short walk to Makerere University</p>
+          </article>
+          <article>
+            <span className="why-icon">📶</span>
+            <h4>Free WiFi</h4>
+            <p>FREE WiFi and study rooms</p>
+          </article>
+          <article>
+            <span className="why-icon">🛡️</span>
+            <h4>24/7 Security</h4>
+            <p>Security + CCTV cameras</p>
+          </article>
+          <article>
+            <span className="why-icon">💰</span>
+            <h4>Affordable Prices</h4>
+            <p>Budget-friendly student rates</p>
+          </article>
+          <article>
+            <span className="why-icon">🤝</span>
+            <h4>Friendly Management</h4>
+            <p>Helpful and responsive staff</p>
+          </article>
         </div>
       </section>
 
@@ -66,6 +100,19 @@ function HomePage() {
                 event.currentTarget.style.display = 'none';
               }}
             />
+          ))}
+        </div>
+      </section>
+
+      <section className="section faq-section">
+        <h3>Frequently Asked Questions</h3>
+        <p>Quick answers to common questions about staying at Delight Students Hostel.</p>
+        <div className="faq-grid">
+          {faqItems.map((item) => (
+            <details className="faq-card" key={item.question}>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
           ))}
         </div>
       </section>

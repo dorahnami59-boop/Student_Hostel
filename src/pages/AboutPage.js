@@ -1,4 +1,4 @@
-import { hostelValues, pageImages, teamMembers } from '../data/siteData';
+import { hostelRules, hostelValues, pageImages, teamMembers } from '../data/siteData';
 
 function AboutPage() {
   return (
@@ -47,6 +47,19 @@ function AboutPage() {
           We welcome students looking for a quiet and organized hostel experience near
           campus, whether you are a first-year student or returning for a new semester.
         </p>
+      </section>
+
+      <section className="section rules-section">
+        <h3>Rules & Regulations</h3>
+        <p>To keep Delight Students Hostel safe and comfortable for everyone.</p>
+        <div className="rules-list">
+          {hostelRules.map((rule) => (
+            <div className="rule-item" key={rule}>
+              <span className="rule-icon">✓</span>
+              <p>{rule}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="section team-section">
