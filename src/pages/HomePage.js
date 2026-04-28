@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { amenities, bookingSteps, faqItems, features, pageImages } from '../data/siteData';
+import { amenities, bookingSteps, faqItems, pageImages } from '../data/siteData';
 
 function HomePage() {
   return (
